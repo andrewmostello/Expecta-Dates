@@ -10,12 +10,12 @@ EXPMatcherImplementationBegin(beSameDay, (NSDate *expected)) {
   });
 
   match(^BOOL{
-    NSDateComponents *actualDateComponents = [[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: actual];
+    NSDateComponents *actualDateComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate: actual];
     NSUInteger actualYear = [actualDateComponents year];
     NSUInteger actualMonthOfYear = [actualDateComponents month];
     NSUInteger actualDayOfMonth = [actualDateComponents day];
     
-    NSDateComponents *expectedDateComponents = [[NSCalendar currentCalendar] components: (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: expected];
+    NSDateComponents *expectedDateComponents = [[NSCalendar currentCalendar] components: (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate: expected];
     NSUInteger expectedYear = [expectedDateComponents year];
     NSUInteger expectedMonthOfYear = [expectedDateComponents month];
     NSUInteger expectedDayOfMonth = [expectedDateComponents day];

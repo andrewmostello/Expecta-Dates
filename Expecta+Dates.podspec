@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Classes'
   s.frameworks   = 'Foundation', 'XCTest'
-  s.dependency 'Expecta', "~> 0.3"
+  s.dependency 'Expecta', "~> 1.0"
   s.platform     = :ios, '6.0'
 end
